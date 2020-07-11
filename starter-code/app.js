@@ -2,33 +2,27 @@
 
 // STEP 1
 // This is a standard function expression. You may also be familiar with function declarations, which begin with the "function" keyword.
-const theOldWay = function(course) {
-  return `I am currently enrolled in ${course}`;
-};
+const theOldWay = course => `I am currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('The old way:', theOldWay('Code 301'));
+console.log('The old way:', theOldWay('Code 301'));
 
 
 // STEP 2
 // We can refactor our first function to use an arrow function.
 // The word "function" is removed and an arrow is added in between the parameter and the opening curly brace
-const theNewWay = (course) => {
-  return `I am currently enrolled in ${course}`;
-};
+const theNewWay = course =>  `I am currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('The new way:', theNewWay('Code 301'));
+console.log('The new way:', theNewWay('Code 301'));
 
 
 // STEP 3
 // When we have one parameter, we can omit the parentheses
-const withoutParens = course => {
-  return `I am currently enrolled in ${course}`;
-};
+const withoutParens = course => `I am currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Without parens:', withoutParens('Code 301'));
+console.log('Without parens:', withoutParens('Code 301'));
 
 
 // STEP 4
@@ -38,18 +32,16 @@ const withoutParens = course => {
 const oneLiner = course => `I cam currently enrolled in ${course}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('As a one-liner:', oneLiner('Code 301'));
+console.log('As a one-liner:', oneLiner('Code 301'));
 
 
 // STEP 5
 // What if we have multiple parameters?
 // In a function expression, they all go in the parentheses
-const add = function(num1, num2) {
-  return `${num1} + ${num2} = ${num1 + num2}`;
-};
+const add = ((num1, num2) =>  `${num1} + ${num2} = ${num1 + num2}`);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Let\'s do some math:', add(4, 5));
+console.log('Let\'s do some math:', add(4, 5));
 
 
 // STEP 6
@@ -58,34 +50,25 @@ const add = function(num1, num2) {
 const addOneLiner = (num1, num2) => `${num1} + ${num2} = ${num1 + num2}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Add as a one-liner:', addOneLiner(4, 5));
+console.log('Add as a one-liner:', addOneLiner(4, 5));
 
 
 // STEP 7
 // What if we have multiple lines of code?
 // We need to use a code block
-const multiLiner = word => {
-  word = word.toUpperCase();
-  return word;
-};
+const multiLiner = word =>  word.toUpperCase();
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Multi-line arrow function:', multiLiner('hello'));
+console.log('Multi-line arrow function:', multiLiner('hello'));
 
 
 // STEP 8
 // The way an object is returned is different with an arrow function, too.
 // Here is how we return an object without arrow functions
-const oldObject = function(array) {
-  return {
-    firstValue: array[0],
-    secondValue: array[1],
-    thirdValue: array[2]
-  };
-};
+const oldObject = array => ({firstValue: array[0], secondValue: array[1], thirdValue: array[2]});
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
+console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
 
 
 // STEP 9
@@ -98,7 +81,7 @@ const newObject = array => ({
 });
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
+console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
 
 
 // STEP 10
